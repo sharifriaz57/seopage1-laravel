@@ -1,0 +1,264 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #666;
+    padding: 1.25rem 0.75rem;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0;
+    color: #222;
+}
+strong {
+    color: #666;
+}
+p {
+    margin-bottom: 0;
+}
+h6 {
+    font-size: 0.85rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+::-webkit-scrollbar {
+    width: 0.35rem;
+    height: 0.45rem;
+}
+::-webkit-scrollbar-track {
+    background-color: #969696;
+    border-radius: 0.35rem;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0.35rem;
+    background-color: #0066AB;
+}
+#main {
+    display: flex;
+    
+    overflow: auto hidden;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.button {
+    padding: 0.35rem 1rem;
+    background-color: #2409b9;
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+}
+
+/* PARENT CARD */
+.parent-card {
+    flex: 0 0 300px;
+    overflow: hidden auto;
+    margin-right: 0.6rem;
+    margin-bottom: 0.3rem;
+    background-color: #efefef;
+}
+
+/* PARENT CARD HEADER */
+.parent-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+.parent-card-header .header-left {
+    display: flex;
+    align-items: center;
+}
+.parent-card-header .indicator {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: lightblue;
+}
+.indicator.red {
+    background-color: #BD0E0E;
+}
+.indicator.skyblue {
+    background-color: #00A3E6;
+}
+.indicator.yellow {
+    background-color: #E6D000;
+}
+.parent-card-header .count {
+    background-color: #D1D7DB;
+    padding: 0.1rem 0.35rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+}
+.parent-card-body {
+    height: 83vh;
+    overflow: hidden auto;
+}
+.parent-card-content {
+    margin: 0.3rem;
+}
+
+
+/* CLIENT CARD */
+.client-card {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    margin-bottom: 0.8rem;
+}
+.client-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+.client-card-header img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+.client-card-header .card-left,
+.client-card-header .card-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* CARD CONTENT */
+.client-card-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.client-card-content .card-content-left {
+    display: flex;
+    align-items: center;
+}
+.client-card-content .card-content-left i,
+.client-card-content .card-content-right i {
+    margin-right: 0.3rem;
+}
+.client-card-content .card-content-left p {
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-clamp: 1; 
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
+.client-card-content .card-content-right {
+    display: flex;
+    align-items: center;
+    background-color: #DADCDF;
+    padding: 0.1rem 0.35rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+}
+
+
+
+/* CLIENT FOOTER */
+.client-card-footer .people {
+    display: flex;
+}
+.client-card-footer .people img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.1rem;
+}
+.client-card-footer .people .more-people {
+    padding: 0.15rem;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+}
+.client-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.client-card-footer .card-footer-right {
+    display: flex;
+    align-items: center;
+}
+.client-card-footer .card-footer-right .footer-right-element {
+    display: flex;
+    margin: 0 0.25rem;
+}
+.client-card-footer .card-footer-right .footer-right-element i {
+    margin-right: 0.2rem;
+}
+.attachment {
+    cursor: pointer;
+}
+.attachment-input {
+    display: none;
+}
+
+
+
+
+/* MODAL */ 
+.main-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    width: 50%;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0 35px 2px rgb(0 0 0 / 42%);
+    display: none;
+}
+.main-modal .modal-header {
+    position: relative;
+    border-bottom: 1px solid #999;
+}
+.modal-header button.close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.button.close {
+    background-color: #e51a1a;
+}
+.main-modal .modal-body {
+    height: 60vh;
+    overflow: hidden auto;
+}
+.modal-header, .modal-body, .modal-footer {
+    padding: 0.75rem 1rem;
+}
+
+
+/* TABLE */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table td,
+.table th {
+    padding: 0.2rem 0.6rem;
+}
